@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elements Showcase</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>This is a Header (h1)</h1>
+        <!-- <h2>This is a Header (h2)</h2>
+        <h3>This is a Header (h3)</h3>
+        <h4>This is a Header (h4)</h4> -->
+
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ol>
+                <li> <a href="https://www.youtube.com/watch?v=mpMvOPhNtjA"> Go to youtube </a> </li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+            </ol>
+
+        </nav>
+    </header>
+
+    <section>
+        <h2>Text Elements</h2>
+
+        <div>
+
+            <pre>
+                Hey we are learning html today 
+                we learnt about tag
+
+                and atributes
+
+            </pre>
+
+
+        </div>
+
+
+
+
+        <p>This is a paragraph (p) with <strong>bold</strong> and <em>italic</em> text.</p>
+        <blockquote>
+            This is a blockquote. "The best way to predict the future is to create it." – Peter Drucker
+        </blockquote>
+        <pre>
+            This is preformatted text.
+            It preserves whitespace and
+            line breaks.
+        </pre>
+        <code>
+            // This is a code element.
+            console.log('Hello, world!');
+        </code>
+    </section>
+
+
+    <section>
+        <h2>Lists</h2>
+        <ul>
+            <li>Unordered list item 1</li>
+            <li>Unordered list item 2</li>
+            <li>Unordered list item 3</li>
+        </ul>
+        <ol>
+            <li>Ordered list item 1</li>
+            <li>Ordered list item 2</li>
+            <li>Ordered list item 3</li>
+        </ol>
+        <dl>
+            <dt>Definition Term 1</dt>
+            <dd>Definition description for term 1.</dd>
+            <dt>Definition Term 2</dt>
+            <dd>Definition description for term 2.</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2>Forms and Inputs</h2>
+        <form action="#">
+            <label for="name">Name : </label>
+            <input type="text" id="name" name="username">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Please input atleast 8 letters">
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color" name="color">
+
+            <fieldset>
+                <legend>Choose your interests:</legend>
+                <label><input type="checkbox" name="interest" value="coding"> Coding</label>
+                <label><input type="checkbox" name="interest" value="music"> Music</label>
+                <label><input type="checkbox" name="interest" value="sports"> Sports</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Choose your gender:</legend>
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </fieldset>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="in">india</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Table</h2>
+        <table border="1">
+            <caption>This is a table caption</caption>
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">This is the table footer</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>name</td>
+                    <td>class</td>
+                    <td>marks</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>sanglap</td>
+                    <td>10</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Media Elements</h2>
+        
+        <img src="hi1.jpg" alt="camera image" height="100px" width="100px">
+
+        <audio controls>
+            <source src="audiofile.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <video controls width="320">
+            <source src="videofile.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bJBwOMPhe6Y?si=Mvp4QmLHVndqkd5S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </section>
+
+    <section>
+        <h2>Semantic Elements</h2>
+        <article>
+            <h3>This is an article</h3>
+            <p>An article is a self-contained piece of content that could stand alone.</p>
+        </article>
+        <aside>
+            <h3>This is an aside</h3>
+            <p>An aside is content that's related to the main content but not essential to its meaning.</p>
+        </aside>
+        <footer>
+            <p>This is the footer of the page.</p>
+        </footer>
+    </section>
+</body>
+
+</html>

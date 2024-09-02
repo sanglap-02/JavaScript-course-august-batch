@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+
+    display: flex;
+    width: 100vw;
+    height: 800px;
+    border: 2px solid red;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: start;
+    flex-wrap:nowrap;
+
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border: 1px solid blue;
+}
+
+#box-1{
+    /* order: 2; */
+    /* flex-grow: 2; */
+    flex-shrink: 2;
+}
+
+#box-6{
+    /* order: 3; */
+}
+
+#box-3{
+    flex-basis: 150px;
+    flex: 1 2 150px;
+}
+
+
+/* 
+
+************ Flex in css ****************
+
+***Flex Direction***
+
+The flex-direction property defines the direction in which the flex items are placed in the flex container.
+
+1.row (default): Items are placed in a row, from left to right.
+2.row-reverse: Items are placed in a row, but in reverse order, from right to left.
+3.column: Items are placed in a column, from top to bottom.
+4.column-reverse: Items are placed in a column, but in reverse order, from bottom to top.
+
+*** Justify Content ***
+The justify-content property aligns the flex items along the main axis (horizontal in a row, vertical in a column).
+
+flex-start (default): Items are aligned at the start.
+flex-end: Items are aligned at the end.
+center: Items are centered.
+space-between: Items are evenly distributed with the first item at the start and the last item at the end.
+space-around: Items are evenly distributed with equal space around them.
+space-evenly: Items are evenly distributed with equal space between them.
+
+
+***Align Items***
+The align-items property aligns the flex items along the cross axis (vertical in a row, horizontal in a column).
+
+stretch (default): Items stretch to fill the container (if no height is set).
+flex-start: Items are aligned at the start.
+flex-end: Items are aligned at the end.
+center: Items are centered.
+baseline: Items are aligned along their baseline.
+
+
+***Flex Wrap***
+The flex-wrap property specifies whether the flex items should wrap or not if there isn't enough space.
+
+nowrap (default): All flex items will be in one line.
+wrap: Flex items will wrap onto multiple lines, from top to bottom.
+wrap-reverse: Flex items will wrap onto multiple lines, but from bottom to top.
+
+***Align Content***
+
+The align-content property aligns a flex container's lines within the container when there is extra space on the cross-axis. It works only when there are multiple lines of flex items.
+
+flex-start: Lines are packed at the start.
+flex-end: Lines are packed at the end.
+center: Lines are packed in the center.
+space-between: Lines are evenly distributed with the first line at the start and the last line at the end.
+space-around: Lines are evenly distributed with equal space around them.
+stretch (default): Lines stretch to take up the remaining space.
+
+***Order***
+
+The order property specifies the order of the flex items. The default value is 0, and items with a lower order value appear first.
+
+***Flex Grow, Shrink, and Basis***
+
+Flex-grow: Specifies how much a flex item will grow relative to the rest of the items inside the container.
+
+Flex-shrink: Specifies how much a flex item will shrink relative to the rest of the items inside the container.
+
+Flex-basis: Specifies the initial size of the flex item before space distribution. Can be set to a fixed size (e.g., 100px) or auto.
+
+
+The flex property is a shorthand for flex-grow, flex-shrink, and flex-basis.
+
+*/
+

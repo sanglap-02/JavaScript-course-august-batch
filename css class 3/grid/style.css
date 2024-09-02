@@ -1,0 +1,84 @@
+/* **** grid ****
+
+Grid Container and Grid Items
+Grid Container: The parent element that holds grid items. It’s defined by setting display: grid or display: inline-grid.
+Grid Items: The direct children of the grid container.
+
+GRID CONTAINER
+
+*** Defining Columns and Rows ***
+The grid-template-columns and grid-template-rows properties define the structure of your grid.
+
+grid-template-columns: Specifies the number of columns and their widths.
+grid-template-rows: Specifies the number of rows and their heights.
+
+
+*** Grid Gaps ***
+The gap property (or its older forms grid-column-gap and grid-row-gap) sets the space between rows and columns.
+gap: 10px; Space between grid items 
+
+Fractional Units (fr)
+The fr unit represents a fraction of the available space in the grid container. It's one of the most powerful features of the Grid system.
+
+The repeat() function allows you to define repeating columns or rows more efficiently.
+
+grid-template-columns: repeat(3, 1fr);
+
+***Auto Columns and Rows***
+
+The grid-auto-columns and grid-auto-rows properties allow you to specify the size of implicitly created grid tracks (rows or columns that are not explicitly defined).
+
+grid-auto-rows: 200px;
+
+
+
+GRID ITEM
+
+*** Aligning Items ***
+
+You can align grid items within their grid cells using the following properties:
+
+justify-items: Aligns items along the row (horizontal) axis.
+align-items: Aligns items along the column (vertical) axis.
+
+*** grid row and column ***
+
+grid-column: Specifies which columns a grid item should occupy.
+grid-row: Specifies which rows a grid item should occupy.
+
+these are short hand properties for  grid-column-start and grid-column-end
+
+grid are is a short hand property for grid-row and grid-column
+
+HW : lear about grid-template-area
+
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    width: 500px;
+    /* height: 100vh; */
+    border: 2px solid blue;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2,100px);
+    /* grid-auto-rows: 200px; */
+    column-gap: 5px;
+    
+}
+.box{
+    border: 1px solid red;
+    align-items: center;
+}
+
+#box-1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: span 3;
+}
+

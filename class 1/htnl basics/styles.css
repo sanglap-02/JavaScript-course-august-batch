@@ -1,0 +1,34 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+
+
+
+
+
+.red-color{
+    color: red;
+}
+
+.blue-color{
+    color: blue;
+}
+
+#highlight{
+    font-size: 32px;background-color: yellowgreen;
+
+}
+
+#text{
+    font-size: 20px ;
+}
+.outerclass{
+    border: 2px solid red;
+    width: 50%;
+    height: 200px;
+    
+}
+
+
+
