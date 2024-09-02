@@ -60,10 +60,10 @@ Readability: The code is flatter and more readable, avoiding the deeply nested s
 function getData() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if(true){
-          const err=new Error("The data fetching failed")
-          reject(err)
-        }
+        // if(true){
+        //   const err=new Error("The data fetching failed")
+        //   reject(err)
+        // }
         console.log("Data retrieved");
         resolve("Data");
       }, 1000);
@@ -97,7 +97,10 @@ function getData() {
     })
     .catch((error) => {
       console.error("Error:", error);
-    });
+    })
+    .finally(()={
+      
+    })
 
 
     // Using async/await to avoid callback hell

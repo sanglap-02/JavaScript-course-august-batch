@@ -7,6 +7,11 @@ function searchPokemon() {
     if (query) {
         const apiUrl = `https://pokeapi.co/api/v2/pokemon/${query}`;
 
+        fetch(apiUrl).then(response =>{
+            console.log(response.json());
+        })
+
+
         fetch(apiUrl)
             .then(response => {
                 if (!response.ok) {
@@ -23,6 +28,29 @@ function searchPokemon() {
             });
     }
 }
+
+const result ={
+    name : "whatever",
+    class : "10",
+    arr : [
+        {
+            a : "22",
+            b : "33"
+        },
+        {
+            a : "55",
+            b : "66"
+        }
+    ],
+    link : "https://google.com"
+}
+
+console.log(result.name);
+console.log(result.link);
+
+console.log(result.arr[1].a);
+
+
 
 
 
