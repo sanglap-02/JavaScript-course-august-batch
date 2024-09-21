@@ -45,10 +45,10 @@ const result ={
     link : "https://google.com"
 }
 
-console.log(result.name);
-console.log(result.link);
+// console.log(result.name);
+// console.log(result.link);
 
-console.log(result.arr[1].a);
+// console.log(result.arr[1].a);
 
 
 

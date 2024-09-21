@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, button {
+            padding: 8px;
+            margin-right: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Management</h1>
+
+    <!-- Form to create a new user -->
+    <form id="userForm">
+        <input type="text" id="username" placeholder="Enter user name" required />
+        <button type="submit">Add User</button>
+    </form>
+
+    <h2>User List</h2>
+    <ul id="userList">
+
+    </ul>
+
+    <script>
+        const apiUrl = 'http://localhost:3000/users';
+
+        // Function to fetch and display users
+        function fetchUsers() {
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const userList = document.getElementById('userList');
+                    userList.innerHTML = '';
+
+                    data.forEach(user => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `
+                            ${user.name}
+                            <button onclick="deleteUser(${user.id})">Delete</button>
+                            <button onclick="editUser(${user.id}, '${user.name}')">Edit</button>
+                        `;
+                        userList.appendChild(li);
+                    });
+                });
+        }
+
+        // Function to create a new user
+        document.getElementById('userForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name: username })
+            })
+            .then(response => response.json())
+            .then(data => {
+                fetchUsers(); // Refresh the user list
+                document.getElementById('username').value = ''; // Clear the input
+            });
+        });
+
+        // Function to delete a user
+        function deleteUser(userId) {
+            fetch(`${apiUrl}/${userId}`, {
+                method: 'DELETE'
+            }).then(() => fetchUsers());
+        }
+
+        // Function to edit a user
+        function editUser(userId, userName) {
+            const newName = prompt('Enter new name', userName);
+            if (newName) {
+                fetch(`${apiUrl}/${userId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name: newName })
+                })
+                .then(() => fetchUsers());
+            }
+        }
+
+        // Load users when the page loads
+        fetchUsers();
+    </script>
+</body>
+</html>
