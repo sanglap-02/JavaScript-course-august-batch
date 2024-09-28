@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MongoDB Example</title>
+  <style>
+    /* Simple styling */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, button {
+      margin: 10px 0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>MongoDB with HTML, CSS, JavaScript</h1>
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="number" id="age" placeholder="Age" required>
+    <button type="submit">Add User</button>
+  </form>
+
+  <h2>Users List</h2>
+  <ul id="usersList"></ul>
+
+  <script>
+    document.getElementById('userForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const age = document.getElementById('age').value;
+
+      // Post request to server
+      const response = await fetch('/add-user', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, age }),
+      });
+
+      const result = await response.json();
+      alert(result.message);
+      fetchUsers(); // Refresh user list after adding a new user
+    });
+
+    async function fetchUsers() {
+      const response = await fetch('/users');
+      const users = await response.json();
+
+      const usersList = document.getElementById('usersList');
+      usersList.innerHTML = '';
+
+      users.forEach(user => {
+        const li = document.createElement('li');
+        li.textContent = `Name: ${user.name}, Age: ${user.age}`;
+        usersList.appendChild(li);
+      });
+    }
+
+    // Fetch users on page load
+    fetchUsers();
+  </script>
+</body>
+</html>
