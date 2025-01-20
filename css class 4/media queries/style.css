@@ -1,0 +1,117 @@
+/*
+
+@media (condition) {
+    CSS styles go here
+  }
+  
+  Types of Media Queries
+Width and Height of Viewport
+
+min-width: Applies styles if the viewport width is at least a certain value.
+max-width: Applies styles if the viewport width is at most a certain value.
+min-height and max-height: Similar but for height.
+Orientation
+
+orientation: landscape: Applies styles when the device is in landscape mode.
+orientation: portrait: Applies styles when the device is in portrait mode.
+Resolution
+
+min-resolution or max-resolution: Targets devices with specific resolutions (e.g., retina displays).
+Aspect Ratio
+
+min-aspect-ratio and max-aspect-ratio: Applies styles based on the ratio of width to height.
+Device Type
+
+screen: Targets screens like desktop, tablets, and mobile.
+print: Targets styles for print.
+Examples
+1. Basic Example (Viewport Width)
+
+Styles for screens larger than or equal to 768px
+@media (min-width: 768px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+  
+  Styles for screens smaller than 768px
+  @media (max-width: 768px) {
+    body {
+      background-color: lightcoral;
+    }
+  }
+
+
+Orientation-Based Styles
+
+Styles for landscape mode
+@media (orientation: landscape) {
+    body {
+      background-color: lightgreen;
+    }
+  }
+  
+  Styles for portrait mode 
+  @media (orientation: portrait) {
+    body {
+      background-color: lightpink;
+    }
+  }
+
+
+  */
+
+  body {
+    background-color: lightgray;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+
+  /* body{
+    background-color: red;
+  }
+
+  @media (min-width:400px) {
+    
+    body{
+      background-color: blue;
+    }
+  } */
+
+
+  nav ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    
+  }
+
+  @media (max-width : 400px) {
+    nav{
+      display: none;
+    }
+  }
+  
+
+  #nav_phone{
+    display: none;
+    
+  }
+
+  #nav_phone ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  
+  @media (max-width: 400px) {
+
+    #nav_phone{
+      display: block;
+    }
+  }

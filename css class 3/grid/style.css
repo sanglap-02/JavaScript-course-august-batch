@@ -60,14 +60,14 @@ HW : lear about grid-template-area
     box-sizing: border-box;
 }
 
-.container{
+/* .container{
     display: grid;
     width: 500px;
-    /* height: 100vh; */
+    height: 100vh;
     border: 2px solid blue;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2,100px);
-    /* grid-auto-rows: 200px; */
+    grid-auto-rows: 200px;
     column-gap: 5px;
     
 }
@@ -80,5 +80,41 @@ HW : lear about grid-template-area
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column: span 3;
+} */
+
+.container{
+    display: grid;
+    width: 500px;
+    height: 100vh;
+
+    border: 2px solid blue;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: 100px 100px 100px ;
+    grid-template-rows: 100px 100px 100px 100px;
+
+    /* justify-content: center;
+    align-items: center; */
+
+    /* row-gap: 10px; */
 }
 
+.box{
+    border: 1px solid red;    
+}
+
+/* #box-5{
+    grid-row-start: 2;
+    grid-row-end: 4;
+} */
+
+#box-1{
+    grid-column-start:1 ;
+    grid-column-end: -1;
+
+    /* justify-content: center; */
+    align-content: center;
+
+    /* grid-column: span 2;
+
+    grid-row: span 3; */
+}

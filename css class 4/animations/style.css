@@ -1,0 +1,199 @@
+/*
+
+CSS animations allow you to create smooth, visually appealing transitions and dynamic effects between states of an element. They enable animations without using JavaScript and are controlled entirely through CSS.
+
+
+@keyframes
+
+Defines the animation's keyframes, which specify the styles at various points during the animation.
+
+@keyframes animation-name {
+  0% {  Starting style  }
+  50% {  Middle style  }
+  100% {  Ending style  }
+}
+
+
+animation: name duration timing-function delay iteration-count direction fill-mode;
+
+animation-timing-function
+Specifies the speed curve of the animation. Common values:
+
+ease (default): Starts slow, speeds up, then slows down.
+linear: Constant speed.
+ease-in: Starts slow and accelerates.
+ease-out: Starts fast and decelerates.
+ease-in-out: Slow start and end with a fast middle.
+cubic-bezier(n, n, n, n): Custom timing curve.
+
+
+animation-direction
+Specifies whether the animation should alternate or reset after each iteration.
+
+Values:
+normal: Resets to the start state after each iteration.
+reverse: Plays the animation in reverse.
+alternate: Alternates between normal and reverse.
+alternate-reverse: Starts in reverse, then alternates.
+
+
+animation-fill-mode
+Determines the styles applied to the element before and after the animation.
+
+Values:
+none: Default; no styles applied outside the animation.
+forwards: Retains the final keyframe's styles after the animation ends.
+backwards: Applies the initial keyframe's styles before the animation starts.
+both: Combines forwards and backwards.
+
+
+animation-play-state
+Allows pausing and resuming the animation.
+
+Values: running | paused
+Example:
+*/
+
+/* .container{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(240, 240, 240);
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    gap: 10px;
+
+
+} */
+
+/* .circle{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(252, 160, 160);
+    border-radius: 50%;
+    animation: loader 0.8s ease-in-out  infinite alternate;
+}
+
+@keyframes loader {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(100px);
+    }
+}
+
+#circle-2{
+    animation-delay: 0.3s;
+    background-color: rgb(185, 255, 80);
+}
+#circle-3{
+    animation-delay: 0.6s;
+    background-color: rgb(80, 162, 255);
+}
+#circle-4{
+    animation-delay: 0.9s;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+
+    background-color: rgb(240, 240, 240);
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(252, 160, 160);
+    animation: four-stage-animation 4s linear infinite ;
+}
+
+
+@keyframes box-move {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(400px) translateY(0) rotate(90deg);
+    }
+    50% {
+        transform: translateX(400px) translateY(-500px) rotate(180deg);
+    }
+    75% {
+        transform: translateX(0) translateY(-500px) rotate(270deg);
+    }
+    100% {
+        transform: translateX(0) translateY(0) rotate(360deg);
+    }
+}
+
+@keyframes four-stage-animation {
+    0% {
+        background-color: red;
+        transform: translate(0, 0);
+    }
+    25% {
+        background-color: blue;
+        transform: translate(200px, 0);
+    }
+    50% {
+        background-color: green;
+        transform: translate(200px, 200px);
+    }
+    75% {
+        background-color: yellow;
+        transform: translate(0, 200px);
+    }
+    100% {
+        background-color: red;
+        transform: translate(0, 0);
+    }
+} */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    animation: loading 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes loading {
+    
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-60px);
+    }
+}
+
+#circle-2{
+    animation-delay: 0.1s;
+}
+
+#circle-3{
+    animation-delay: 0.2s;
+}
+
+#circle-4{
+    animation-delay: 0.3s;
+}

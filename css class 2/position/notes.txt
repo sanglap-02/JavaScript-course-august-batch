@@ -1,0 +1,69 @@
+The position property in CSS defines how an element is positioned in the document. It specifies the positioning method (static, relative, absolute, fixed, or sticky). Let's explore absolute, relative, sticky, and fixed positions in detail with examples.
+
+1. relative
+Definition: The element is positioned relative to its normal position. Shifting the element using top, right, bottom, or left moves it relative to its original position.
+Key Features:
+Does not affect other elements in the flow.
+Can be used as a reference for absolute children.
+
+<div style="position: relative; background: lightblue; width: 200px; height: 100px;">
+   I am relative.
+   <span style="position: absolute; top: 20px; left: 20px; background: yellow; padding: 5px;">
+      I am absolutely positioned relative to this box.
+   </span>
+</div>
+Explanation:
+
+The <div> has position: relative, so the <span> inside it uses this as its reference for absolute positioning.
+
+
+2. absolute
+Definition: The element is removed from the normal document flow and is positioned relative to its nearest positioned ancestor (an ancestor with position: relative, absolute, or fixed). If no such ancestor exists, it positions relative to the html (or the viewport).
+Key Features:
+Does not affect other elements.
+Requires a positioned ancestor for meaningful placement.
+
+<div style="position: relative; width: 300px; height: 200px; background: lightgreen;">
+   Parent (relative)
+   <div style="position: absolute; top: 50px; left: 30px; background: orange; width: 100px; height: 50px;">
+      Child (absolute)
+   </div>
+</div>
+
+Explanation:
+
+The orange box is positioned 50px from the top and 30px from the left of the green box because the green box is the nearest positioned ancestor.
+3. fixed
+Definition: The element is removed from the document flow and is positioned relative to the viewport. It stays in the same position even when the page is scrolled.
+Key Features:
+Does not move with the page scroll.
+Useful for headers, footers, or "back to top" buttons.
+
+<div style="height: 2000px;">
+   <div style="position: fixed; top: 0; left: 0; background: lightcoral; width: 100%; padding: 10px;">
+      I am fixed at the top of the page.
+   </div>
+   <p style="margin-top: 50px;">Scroll the page to see the fixed header.</p>
+</div>
+
+
+Explanation:
+
+The red header stays fixed at the top of the page even when you scroll.
+4. sticky
+Definition: The element toggles between relative and fixed depending on the scroll position. It behaves like relative until it reaches a defined scroll threshold, then becomes fixed.
+Key Features:
+Requires a top, left, right, or bottom value.
+Sticks within its parent container.
+
+<div style="height: 1000px; overflow: auto;">
+   <h2 style="position: sticky; top: 0; background: lightblue; padding: 10px;">
+      I am sticky and will stick to the top while scrolling.
+   </h2>
+   <p style="margin: 20px;">Scroll down to see the sticky effect.</p>
+   <p style="margin: 20px;">Lorem ipsum dolor sit amet...</p>
+</div>
+
+Explanation:
+
+The blue heading remains stuck at the top of its container when scrolling, but only within the container's boundaries.

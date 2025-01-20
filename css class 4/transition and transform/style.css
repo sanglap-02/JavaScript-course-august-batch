@@ -1,0 +1,134 @@
+/* transition
+A shorthand property to define all aspects of a transition in one line.
+
+transition: property duration timing-function delay;
+
+transition: all 0.5s ease-in-out 0.2s;
+
+transition-property
+Specifies the property or properties to apply the transition to.
+Values: all | specific-property (e.g., background-color)
+
+transition-duration
+Defines how long the transition takes to complete.
+Values: Time in seconds (s) or milliseconds (ms).
+
+transition-timing-function
+Specifies the speed curve of the transition (e.g., how the animation accelerates or decelerates).
+Common Values:
+
+ease (default): Starts slow, speeds up, and slows down.
+linear: Constant speed throughout.
+ease-in: Starts slow and speeds up.
+ease-out: Starts fast and slows down.
+ease-in-out: Starts and ends slow, speeds up in between.
+cubic-bezier(n, n, n, n): Custom speed curve.
+Example:
+
+
+transition-delay
+Specifies the delay before the transition starts.
+Values: Time in seconds (s) or milliseconds (ms).
+
+
+element {
+    transition: property duration timing-function delay;
+  } 
+
+  div {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  transition: background-color 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+div:hover {
+  background-color: lightblue;
+}
+    
+  
+**** Transformation ******
+
+Transforms are used to manipulate the position, size, or shape of an element. They allow you to rotate, scale, move, or skew elements on the 2D plane.
+
+transform: function(value);
+
+  transform: translateX(50px) scale(1.5) rotate(45deg);
+
+  
+  Translate Moves an element along the X or Y axis.
+
+translate(x, y): Moves the element by x along the X-axis and y along the Y-axis.
+translateX(x): Moves the element horizontally.
+translateY(y): Moves the element vertically.
+
+div {
+  transform: translate(50px, 100px);
+}
+
+
+Scale Resizes the element by scaling it.
+
+scale(x, y): Scales the element by x on the X-axis and y on the Y-axis.
+scaleX(x): Scales the element horizontally.
+scaleY(y): Scales the element vertically.
+
+
+Rotate Rotates the element around a fixed point (usually the center) by a specified angle.
+
+Units: deg (degrees) or turn (1 turn = 360 degrees).
+
+Skew Tilts the element along the X or Y axis.
+
+skew(x, y): Skews the element along the X-axis by x degrees and the Y-axis by y degrees.
+skewX(x): Skews the element horizontally.
+skewY(y): Skews the element vertically.
+
+div {
+  transform: skew(20deg, 10deg);
+}
+
+
+The transform property works seamlessly with transition to create smooth animations.
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  transition: transform 0.5s ease-in-out;
+}
+
+div:hover {
+  transform: rotate(45deg) scale(1.5);
+}
+
+  
+  */
+
+
+  #text{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    /* transition: all 0.5s cubic-bezier(0, 0.57, 0.88, 0.15) 1s; */
+
+    /* transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    transition-delay: 1s; */
+
+    margin: 200px;
+
+    transition: all 0.5s ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #text:hover{
+   
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }
+
+
+  

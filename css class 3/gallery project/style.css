@@ -23,17 +23,28 @@ nav ul {
     display: flex;
     color: white;
     list-style: none;
+    gap: 10px;
+    align-items: center;
     
 }
+
 nav ul li{
     margin-right: 10px;
 }
 
 nav ul li:hover{
+    cursor: pointer;
+    color: #a1f1b9;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* nav ul li:hover{
     color: #041308;
     cursor: pointer;
     transition: all 0.1s ease-in;
-}
+} */
 
 
 .container{
@@ -46,6 +57,8 @@ nav ul li:hover{
 }
 
 .text{
+    /* flex-basis: 30%; */
+
     flex-basis: 30%;
 }
 .gallery{
@@ -57,12 +70,21 @@ nav ul li:hover{
 }
 
 
-.row-2{
+/* .row-2{
     grid-row: span 2;
 }
 .col-2{
     grid-column: span 2;
-} 
+}  */
+
+
+.row-2{
+    grid-row: span 2;
+}
+
+.col-2{
+    grid-column: span 2;
+}
 
 .box{
     background-size: cover;

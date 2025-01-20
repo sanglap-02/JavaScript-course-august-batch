@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    margin: 2px solid red;
+    display: inline;
+}
+
+img{
+    display: inline-block;
+}
+

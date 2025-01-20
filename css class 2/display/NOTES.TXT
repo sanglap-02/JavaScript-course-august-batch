@@ -1,0 +1,66 @@
+Detailed Explanation of block, inline, inline-block, and none
+1. block
+Definition: A block element takes up the full width of its container, starting on a new line. It forces the next element to appear below it.
+Default Behavior: div, p, h1-h6, section, etc., are block elements by default.
+Key Features:
+Starts on a new line.
+Takes up the full width of the parent container unless a width is specified.
+Can have width, height, margins, and paddings.
+
+
+<div style="display: block; background: lightblue; padding: 10px;">
+   I am a block element.
+</div>
+<p style="display: block; background: lightcoral; padding: 10px;">
+   I am another block element.
+</p>
+
+Output:
+
+Each element appears on a new line and occupies the full width.
+2. inline
+Definition: An inline element does not start on a new line and only takes up as much width as its content requires.
+Default Behavior: span, a, strong, em, etc., are inline elements by default.
+Key Features:
+Does not start on a new line.
+Does not respect width or height properties.
+Can have padding, but it does not affect surrounding elements.
+<p>
+   This is an <span style="display: inline; background: yellow;">inline</span> element within a paragraph.
+</p>
+
+
+3. inline-block
+Definition: Combines characteristics of both inline and block.
+It flows with text like an inline element.
+You can set width, height, padding, and margins like a block element.
+Key Features:
+Does not start on a new line (like inline).
+Respects width and height (like block).
+
+<div>
+   <div style="display: inline-block; width: 100px; height: 50px; background: lightgreen;">
+      Inline-block 1
+   </div>
+   <div style="display: inline-block; width: 100px; height: 50px; background: lightcoral;">
+      Inline-block 2
+   </div>
+</div>
+Output:
+
+Both elements appear side-by-side, but their width and height are respected.
+4. none
+Definition: The none value hides the element completely. It does not occupy space in the layout.
+Key Features:
+The element is not visible on the page.
+It does not take up any space.
+Different from visibility: hidden; which hides the element but still occupies space.
+
+<div style="display: none; background: lightblue;">
+   You cannot see me.
+</div>
+<p style="background: lightgreen;">I am visible.</p>
+
+Output:
+
+The <div> is hidden and does not take up space, but the paragraph is visible.

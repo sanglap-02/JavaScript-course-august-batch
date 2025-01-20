@@ -1,28 +1,35 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* *{
     margin: 0px;
     padding: 0px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* box-sizing: border-box; */
-/* }
+    font-family: "Roboto", serif;
+    font-weight: 100px;
+
+    box-sizing: border-box; 
+}
+
+
+
 
 .container{
     width: 200px;
     height: 200px;
-    border: 10px solid red;
-    margin: 10px 10px ;
+    border: 2px solid red;
+    margin: 10px ;
     padding: 10px 40px;
     overflow: auto;
 }
 
 .text-styles{
-    /* text-align: right; */
-    /* text-decoration:underline; */
-    /* font-family: monospace; */
+    text-align: right; 
+    text-decoration:underline; 
+     font-family: monospace;
 }
 
-/* a{
+a{
     text-decoration: none;
-}  */
+}  
 
 .container{
     margin-top: 100px;
@@ -46,5 +53,50 @@
     width: 100px;
     height: 100px;
     background-color: blue;
+} */
+
+
+/* #container{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+
+
+} */
+
+
+.container{
+    background-color: rgba(0, 255, 213, 0.728);
+    width: 600px;
+    height: 600px;
+    border: 2px solid red;
+    
 }
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black ;
+    
+}
+
+.red{
+    background-color: red;
+    position: absolute;
+}
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
+
+
 
