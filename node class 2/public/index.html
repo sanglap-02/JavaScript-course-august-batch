@@ -48,6 +48,7 @@
             fetch(apiUrl)
                 .then(response => response.json())
                 .then(data => {
+                    // console.log(data);
                     const userList = document.getElementById('userList');
                     userList.innerHTML = '';
 
@@ -74,6 +75,9 @@
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ name: username })
+                // {
+                //     name : "sanglap"
+                // }
             })
             .then(response => response.json())
             .then(data => {
@@ -93,6 +97,7 @@
         function editUser(userId, userName) {
             const newName = prompt('Enter new name', userName);
             if (newName) {
+                // "https:localhost:3000/users/2"
                 fetch(`${apiUrl}/${userId}`, {
                     method: 'PUT',
                     headers: {

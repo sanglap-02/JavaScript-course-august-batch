@@ -10,6 +10,14 @@ how export and import works
 
 type of modules : file, build-in(fs),external
 
+path 
+os 
+http 
+
+
+1. protocall
+2. message ques
+
 
 */
 
@@ -40,6 +48,9 @@ server.listen(3000,()=>{
     console.log("listening to port 3000 on localhost");
 })
 
+
+const a=4
+// modules.exports=a
 
 
 

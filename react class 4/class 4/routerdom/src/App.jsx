@@ -10,8 +10,11 @@ import {Routes,Route} from 'react-router-dom'
 import About from './Screens/About'
 import Contact from './Screens/Contact'
 
+import Products from './Screens/Products'
+
+import Phonedetails from './Screens/Phonedetails'
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -22,7 +25,10 @@ function App() {
       <Route path='/' element={<Home></Home>}/>
       <Route path='/about' element={<About></About>}/>
       <Route path='/contact' element={<Contact></Contact>}/>
+      <Route path='/products' element={<Products></Products>}/>
+      <Route path='/contact/phone' element={<Phonedetails></Phonedetails>}/>
     </Routes>
+
 
 
     <Footer></Footer>

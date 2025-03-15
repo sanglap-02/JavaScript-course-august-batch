@@ -11,6 +11,7 @@ app.use(express.static('public'));
 
 // MongoDB Connection
 // mongodb://localhost:27017/
+// connection string : mongodb://localhost:27017/
 
 mongoose.connect('mongodb://localhost:27017/myDatabase', {
   useNewUrlParser: true,
@@ -23,22 +24,27 @@ const userSchema = new mongoose.Schema({
   age: Number,
 });
 
-const userSchema2=new mongoose.Schema({
-    name : String,
-    emial : String,
-})
 
-const UserModel2=mongoose.model('User2',userSchema2)
+// const UserModel2=mongoose.model('User2',userSchema2)
 
 // Create a Model
 const User = mongoose.model('User', userSchema);
 
+// const UserModel3=mongoose.model('User4',userSchema3)
+
 // Routes
 app.post('/add-user', async (req, res) => {
-  const { name, age } = req.body;
-  const newUser = new User({ name, age });
-  await newUser.save();
-  res.json({ message: 'User added successfully' });
+  try{
+    const { name, age } = req.body;
+    const newUser = new User({ name, age });
+    await newUser.save();
+    res.json({ message: 'User added successfully' });
+  }
+  catch(error){
+    console.log(error)
+    res.status(500).json({ error: error.message })
+  }
+  
 });
 
 app.get('/users', async (req, res) => {

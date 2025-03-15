@@ -2,11 +2,21 @@
 
 // data tyepes 
 
-const a = 1
+const a = 'b'
 const name = "sanglap"
-// console.log(typeof name);
+console.log(typeof a);
 
 // premitive and non-primitive
+
+
+let num1=4
+
+let num2 =num1
+
+num2=10
+
+console.log(num1);
+
 
 
 
@@ -30,43 +40,55 @@ const b = 4
  console.log(arr);
 
 
-// console.log(1+2);
-// console.log(1+"2");
-// console.log("1"+"2");
-// console.log("1"+2+3);
-// console.log(1+2+"3");
+console.log(1+2);
+console.log(1+"2");
+console.log("1"+"2");
+console.log("1"+2+3);
+console.log(1+2+"3");
 
 // coresion
 
 // **** Strings ***
-// let str =new String('    sanglap   ')
+// let str =new String('    sanglap kundus   ')
 // console.log(str);
 // console.log(str.length);
-// username :   sanglap
+// // username :   sanglap
 
-// console.log(str.trim());
+// console.log(str.charAt(14));
+// console.log(str.trim('s'));
 
 // sanglap
 // SangLap
 
 // *** Date ***
-const today = new Date()
+// const today = new Date()
+// console.log(today);
 // console.log(today.toLocaleDateString());
+// console.log(today.toISOString());
 
 // arrays 
+const arr10 = [1,"sanglap","kundus",true,null,undefined,NaN,Infinity,-Infinity]
+
+
 const arr2 = [1, 2, 3, 4, 5, 6]
 // The array is JS is mutable
 // console.log(arr2);
 // console.log(arr2[2]);
 
-// arr2.push(19)
-// console.log(arr2);
+console.log(arr2);
+
+console.log(arr2[2]);
+
+arr2.push(19)
+console.log(arr2);
 
 const arr3 = [7, 8]
 
 // arr2.push(arr3)
+
+// console.log(arr2);
 const new_arr = arr2.concat(arr3)
-// console.log(new_arr);
+console.log(new_arr);
 
 // [1,2,3,4,5,5,[7,8]]
 
@@ -94,6 +116,14 @@ function sum (a,b){ //parameters
     return a+b
 }
 
+function multiply(a,b){
+    return a*b
+}
+
+const ans2=multiply(3.5,4.5)
+
+console.log(ans2);
+
 // calling the function
 // sum(1,2) // arguments
 
@@ -102,6 +132,16 @@ const ans=sum(3,4)
 
 const func=function(a,b) {
     return a*b
+}
+
+
+const func3=function (c,d){
+    return c*d
+}
+
+
+const func4=(a,b)=>{
+    return a+10+b;
 }
 
 // flat arrow function 
@@ -118,7 +158,7 @@ const student={
     class : '4'
 }
 
-// console.log(student['name']);
+console.log(student.marks);
 
 // scopes 
 
@@ -129,11 +169,12 @@ function fun() {
 
     // console.log("marks 1 is "+a+" marks 2 is "+b);
     // console.log(`marks 1 is ${a.length} marks 2 is ${b}`);
+    console.log(innerVariable);
 }
 
 // console.log(innerVariable);
 
-// fun()
+fun()
 
 // **** loops ****
 
@@ -166,6 +207,43 @@ do{
 let temp=10
 // console.log(temp++); // first use then increase 
 // console.log(++temp); // first increase then use 
+
+
+
+const newarr=[1,2,3,4]
+
+// for(let index=0;index<newarr.length;index++){
+//     console.log(`the value at index ${index} is ${newarr[index]}`)
+// }
+
+
+let index=0;
+
+while(index<newarr.length){
+    console.log(`the value at index ${index} is ${newarr[index]}`)
+    index++
+}
+
+
+newarr.forEach((value,index)=>{
+    console.log(index,value)
+})
+
+
+//do while loop
+
+let j=0;
+
+do{
+    console.log(`the value at index ${j} is ${newarr[j]}`)
+    j++
+}while(j<newarr.length)
+
+
+
+// newarr.forEach((value,index)=>{
+//     console.log(index,value)
+// })
 
 
 

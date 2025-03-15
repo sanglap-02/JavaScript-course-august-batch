@@ -2,9 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
-const cors = require('cors');
-
-// const port=3000
+const cors = require('cors'); // cross origin resources sharing
 
 connectDB();
 const app = express();

@@ -9,6 +9,8 @@ Problems with Callback Hell:
 Difficult to Read: The code becomes increasingly difficult to read as the nesting increases.
 Hard to Maintain: Making changes or debugging becomes cumbersome.
 Error Handling: Managing errors across multiple callbacks can be challenging and lead to convoluted code.
+
+
 How Promises Help Overcome Callback Hell:
 Promises help to manage asynchronous operations more effectively by flattening the nested structure of callbacks and allowing for easier error handling and chaining of operations.
 
@@ -24,10 +26,23 @@ Readability: The code is flatter and more readable, avoiding the deeply nested s
 */
 
 
+// const fun=(()=>{
+//   console.log("hello 1");
+
+// })
+
+
+// setTimeout(()=>{
+//   console.log("hello 2");
+// },2000)
+
+
+
 // Example of callback hell
 // function getData(callback) {
 //     setTimeout(() => {
 //       console.log("Data retrieved");
+//       callback()
 //     }, 1000);
 //   }
   
@@ -55,6 +70,7 @@ Readability: The code is flatter and more readable, avoiding the deeply nested s
 //   });
 
 
+
   // Example of using Promises to avoid callback hell
 
 function getData() {
@@ -64,8 +80,16 @@ function getData() {
         //   const err=new Error("The data fetching failed")
         //   reject(err)
         // }
-        console.log("Data retrieved");
-        resolve("Data");
+        // console.log("Data retrieved");
+
+        try{
+          //to connect
+          console.log("data retrieved successfully");
+          resolve("we have the data") 
+        }
+        catch(error){
+          reject(error)
+        }
       }, 1000);
     });
   }
@@ -88,7 +112,7 @@ function getData() {
     });
   }
   
-  // Chaining promises
+//   // Chaining promises
   getData()
     .then(processData)
     .then(saveData)
@@ -98,59 +122,55 @@ function getData() {
     .catch((error) => {
       console.error("Error:", error);
     })
-    .finally(()={
-      
-    })
 
+//     // Using async/await to avoid callback hell
 
-    // Using async/await to avoid callback hell
-
-async function performOperations() {
-    try {
-      const data = await getData();
-      const processedData = await processData(data);
-      const savedData = await saveData(processedData);
-      console.log("All done!", savedData);
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  }
+// async function performOperations() {
+//     try {
+//       const data = await getData();
+//       const processedData = await processData(data);
+//       const savedData = await saveData(processedData);
+//       console.log("All done!", savedData);
+//     } catch (error) {
+//       console.error("Error:", error);
+//     }
+//   }
   
-  performOperations();
+//   performOperations();
 
 
 
-  // const arr1=[1,2,3,5]
-  // const arr3=[4,5]
+//   // const arr1=[1,2,3,5]
+//   // const arr3=[4,5]
 
-  // const arr2=[...arr1,...arr3,"hi"]
+//   // const arr2=[...arr1,...arr3,"hi"]
 
-  // console.log(arr2);
-
-
-  // const obj={
-  //   a : "hi",
-  //   b : "23"
-  // }
-
-  // const {vala,valb}=obj // object destructuring 
+//   // console.log(arr2);
 
 
-  // settimeout function 
+//   // const obj={
+//   //   a : "hi",
+//   //   b : "23"
+//   // }
 
-  // console.log("hi");
-  // // console.log("hi2");
-  // setTimeout(()=>{
-  //   console.log("hi");
-  // },2000) // 2000 is in miliseconds
-
-
-  // console.log("hi3");
+//   // const {vala,valb}=obj // object destructuring 
 
 
-  // function printhello(){
-  //   console.log("hi 2");
-  // }
+//   // settimeout function 
+
+//   // console.log("hi");
+//   // // console.log("hi2");
+//   // setTimeout(()=>{
+//   //   console.log("hi");
+//   // },2000) // 2000 is in miliseconds
+
+
+//   // console.log("hi3");
+
+
+//   // function printhello(){
+//   //   console.log("hi 2");
+//   // }
 
 
 

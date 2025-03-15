@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const[length, setLength]=useState(8)
+  const[length, setLength]=useState(10)
   const[numAllowed, setNumAllowed]=useState(false)
   const[charAllowed, setCharAllowed]=useState(false)
   const[password, setPassword]=useState("")
@@ -47,18 +47,6 @@ function App() {
     className="w-full p-2 border border-gray-300 rounded-md bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
     type="text"
     value={password} 
-    readOnly
-    />
-    <input 
-    className="w-full p-2 border border-gray-300 rounded-md bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-    type="text"
-    value={password1} 
-    readOnly
-    />
-    <input 
-    className="w-full p-2 border border-gray-300 rounded-md bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-    type="text"
-    value={password2} 
     readOnly
     />
     <button className='mt-4'

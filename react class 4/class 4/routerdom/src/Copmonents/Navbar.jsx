@@ -21,11 +21,13 @@ function Navbar() {
           ></path>
         </svg>
       </span>
-      <span className="font-bold">DevUI</span>
+      <span className="font-bold">MyApp</span>
     </div>
     <div className="hidden lg:block">
       <ul className="inline-flex space-x-8">
         <li>
+
+          {/* <a href="https://goolge.com">text</a> */}
           
           <Link className="text-sm font-semibold text-gray-800 hover:text-gray-900" to="/">
           Home
@@ -36,6 +38,10 @@ function Navbar() {
         </li>
         <li>
         <Link className="text-sm font-semibold text-gray-800 hover:text-gray-900" to="contact"> Contact</Link>
+        </li>
+
+        <li>
+          <Link className="text-sm font-semibold text-gray-800 hover:text-gray-900" to="products"> Products</Link>
         </li>
       </ul>
     </div>

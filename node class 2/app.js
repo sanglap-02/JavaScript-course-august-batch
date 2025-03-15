@@ -10,7 +10,8 @@ app.use(express.static('public'));
 // Mock data (in-memory array of users) database 
 let users = [
     { id: 1, name: 'John Doe' },
-    { id: 2, name: 'Jane Doe' }
+    { id: 2, name: 'Jane Doe' },
+    { id: 3, name: 'ram pal' },
 ];
 
 // GET: Retrieve all users

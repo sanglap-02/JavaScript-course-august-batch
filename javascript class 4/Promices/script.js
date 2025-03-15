@@ -23,34 +23,41 @@ Chaining Promises: Promises can be chained using .then(), which allows you to ha
 
 */
 
-const myPromise = new Promise((resolve, reject) => {
-    const success = true;
+// primise((resolve,reject)=>{
+
+// })
+
+// const myPromise = new Promise((resolve, reject) => {
+//     const success = false;
   
-    if (success) {
-      resolve("The operation was successful!");
-    } else {
-      reject("The operation failed.");
-    }
-  });
+//     if (success) {
+//       resolve("The operation was successful!");
+//     } else {
+//       reject("The operation failed.");
+//     }
+//   });
+
+  // console.log(myPromise);
+
   
   // Using the promise
-  myPromise
-    .then((message) => {
-      console.log(message); // "The operation was successful!"
-    })
-    .catch((error) => {
-      console.error(error);
-    })
-    .finally(() => {
-      console.log("Operation completed, regardless of success or failure.");
-    });
+  // myPromise
+  //   .then((message) => {
+  //     console.log(message); // "The operation was successful!"
+  //   })
+  //   .catch((error) => {
+  //     console.error(error);
+  //   })
+  //   .finally(() => {
+  //     console.log("Operation completed, regardless of success or failure.");
+  //   });
   
 
-// fetch("https://api.example.com/data")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch((error) => {
-//     console.error("Error fetching data:", error);
-//   });
+fetch("https://api.example.com/data")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });

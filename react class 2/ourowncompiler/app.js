@@ -4,7 +4,7 @@ function myOwnRender(com){
 }
 
 const com ={
-    name : 'p',
+    name : 'a',
     prop : {
         href : "https://google.com"
     },
@@ -12,4 +12,6 @@ const com ={
 }
 
 myOwnRender(com)
+
+
 

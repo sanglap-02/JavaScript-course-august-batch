@@ -60,7 +60,7 @@ app.get('/user/:id', (req, res) => {
 // Catch all errors and respond
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).send(err.stack);
 });
 
 
@@ -98,6 +98,18 @@ app.get('/user/:id', validateUserId, (req, res) => {
 
 
 // Application-Level Middleware: This middleware is bound to an instance of the express app.
+
+
+// const express = require('express');
+// const app = express();
+// const port = 3000;
+
+// // Starting the server
+// app.listen(port, () => {
+//   console.log(`Server is running on port ${port}`);
+// });
+
+
 
 
 const express = require('express');
